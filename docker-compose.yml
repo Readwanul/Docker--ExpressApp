@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  express:
+    build: .
+    container_name: express
+    restart: always
+    expose:
+      - "5000"
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - express
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf

